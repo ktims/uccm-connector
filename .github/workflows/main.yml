@@ -1,4 +1,4 @@
-name: "KiCad CI/CD for Spora main board"
+name: "KiCad CI/CD for VE7XEN UCCM+BBB carrier"
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
         # Required - kibot config file
