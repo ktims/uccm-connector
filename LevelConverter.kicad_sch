@@ -533,7 +533,7 @@
     (uuid 00000000-0000-0000-0000-00005dc4dbe2)
     (property "Reference" "U3" (id 0) (at 128.27 74.93 0))
     (property "Value" "MAX3232" (id 1) (at 128.27 77.47 0))
-    (property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (id 2) (at 129.54 111.76 0)
+    (property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" (id 2) (at 129.54 111.76 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "https://datasheets.maximintegrated.com/en/ds/MAX3222-MAX3241.pdf" (id 3) (at 128.27 82.55 0)

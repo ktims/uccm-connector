@@ -1,0 +1,42 @@
+name: "KiCad CI/CD for Spora main board"
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    paths:
+      - '*.sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - '.github/workflows/main.yml'
+  pull_request:
+    paths:
+      - '*.sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - '.github/workflows/main.yml'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Fabrication:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: INTI-CMNB/KiBot@v2_k6
+      with:
+        # Required - kibot config file
+        config: gpsdo-connector.kibot.yaml
+        # optional - prefix to output defined in config
+        dir: Fabrication
+        # optional - schematic file
+        schema: 'gpsdo-connector.kicad_sch'
+        # optional - PCB design file
+        board: 'gpsdo-connector.kicad_pcb'
+    - name: Retrieve results
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: Fabrication_Main
+        path: |
+          Fabrication/
+        if-no-files-found: warn
