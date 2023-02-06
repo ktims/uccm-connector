@@ -6,8 +6,8 @@
 
   (title_block
     (title "UCCM+BBB Carrier")
-    (date "2022-10-07")
-    (rev "1")
+    (date "2023-02-05")
+    (rev "2")
     (company "VE7XEN")
   )
 
@@ -576,7 +576,7 @@
     (stroke (width 0.1524) (type solid) (color 0 0 0 0))
     (fill (color 255 255 194 1.0000))
     (uuid 209f9bae-8fa6-4e41-9ad6-2ac835ee19ad)
-    (property "Sheet name" "10M Filter" (id 0) (at 140.97 94.5384 0)
+    (property "Sheet name" "10M Output" (id 0) (at 140.97 94.5384 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
     (property "Sheet file" "10M_Out.kicad_sch" (id 1) (at 140.97 100.9146 0)
